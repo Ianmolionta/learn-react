@@ -1,14 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import test from './test.jsx'
+import { Route, Routes } from 'react-router-dom'
+import Test from './Pages/test.jsx'
+import Home from './Pages/home.jsx'
+
 function App() {
   return (
-    <div>
-      <h1>
-        hello world
-      </h1>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home></Home>} >
+      </Route>
+      <Route path="/test" element={<Test></Test>} />
+    </Routes>
   )
 }
 
